@@ -1,0 +1,21 @@
+import React from "react";
+import { GameProvider } from "./context/GameContext";
+import ShopPanel from "./components/ShopPanel";
+import PlayerStats from "./components/PlayerStats";
+import EventPanel from "./components/EventPanel";
+import AlertOverlay from "./components/AlertOverlay";
+
+const App: React.FC = () => {
+  return (
+    <GameProvider>
+      <div className="min-h-screen bg-gray-950 text-white flex flex-col md:flex-row gap-4 p-6">
+        <PlayerStats />
+        <ShopPanel />
+        <EventPanel />
+        <AlertOverlay />
+      </div>
+    </GameProvider>
+  );
+};
+
+export default App;
